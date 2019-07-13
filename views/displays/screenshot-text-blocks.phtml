@@ -1,0 +1,116 @@
+{% extends "layouts/screenshots.phtml" %}
+
+{% set numColumns = 1 %}
+{% set numRows = 6 %}
+
+{% block main %}
+    {# Header #}
+    <div class="display-block-wrapper">
+        <div class="display-block-column-header">Text Blocks</div>
+    </div>
+
+    {# Single Column Text Block #}
+    <div class="display-block-wrapper">
+        <div class="display-block-container">
+            <div class="display-block-header"><h1>560</h1></div>
+            {% embed "frames/single-column-560.phtml" %}
+                {% block block1 %}
+                    {% include "blocks/text-block-default.phtml" with {
+                        width: 560,
+                        content: lipsum(7, 'sentences'),
+                    } %}
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </div>
+
+    {# Double Column Text Block #}
+    <div class="display-block-wrapper">
+        <div class="display-block-container">
+            <div class="display-block-header"><h1>275 | 275</h1></div>
+            {% embed "frames/double-column-275-275.phtml" %}
+                {% block block1 %}
+                    {% include "blocks/text-block-default.phtml" with {
+                        width: 275,
+                        content: lipsum(1, 'sentences'),
+                    } %}
+                {% endblock %}
+                {% block block2 %}
+                    {% include "blocks/text-block-default.phtml" with {
+                        width: 275,
+                        content: lipsum(1, 'sentences'),
+                    } %}
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </div>
+
+    {# Double Column Text Block #}
+    <div class="display-block-wrapper">
+        <div class="display-block-container">
+            <div class="display-block-header"><h1>370 | 180</h1></div>
+            {% embed "frames/double-column-370-180.phtml" %}
+                {% block block1 %}
+                    {% include "blocks/text-block-default.phtml" with {
+                        width: 370,
+                        content: lipsum(3, 'sentences'),
+                    } %}
+                {% endblock %}
+                {% block block2 %}
+                    {% include "blocks/text-block-default.phtml" with {
+                        width: 180,
+                        content: lipsum(1, 'sentences'),
+                    } %}
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </div>
+
+    {# Double Column Text Block #}
+    <div class="display-block-wrapper">
+        <div class="display-block-container">
+            <div class="display-block-header"><h1>180 | 370</h1></div>
+            {% embed "frames/double-column-180-370.phtml" %}
+                {% block block1 %}
+                    {% include "blocks/text-block-default.phtml" with {
+                        width: 180,
+                        content: lipsum(1, 'sentences'),
+                    } %}
+                {% endblock %}
+                {% block block2 %}
+                    {% include "blocks/text-block-default.phtml" with {
+                        width: 370,
+                        content: lipsum(2, 'sentences'),
+                    } %}
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </div>
+
+    {# Triple Column Text Block #}
+    <div class="display-block-wrapper">
+        <div class="display-block-container">
+            <div class="display-block-header"><h1>180 | 180 | 180</h1></div>
+            {% embed "frames/triple-column-180-180-180.phtml" %}
+                {% block block1 %}
+                    {% include "blocks/text-block-default.phtml" with {
+                        width: 180,
+                        content: lipsum(18, 'words'),
+                    } %}
+                {% endblock %}
+                {% block block2 %}
+                    {% include "blocks/text-block-default.phtml" with {
+                        width: 180,
+                        content: lipsum(18, 'words'),
+                    } %}
+                {% endblock %}
+                {% block block3 %}
+                    {% include "blocks/text-block-default.phtml" with {
+                        width: 180,
+                        content: lipsum(18, 'words'),
+                    } %}
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </div>
+{% endblock %}

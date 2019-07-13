@@ -1,0 +1,19 @@
+{# Footer #}
+
+<table align="center" cellpadding="0" cellspacing="0" border="0" width="600" id="footerTable" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+    <tr>
+        <td width="600" height="10" colspan="3"><!--spacer--></td>
+    </tr>
+    <tr>
+        <td width="20"><!--spacer--></td>
+        <td width="560" valign="top" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1 !important; text-align: left; font-size: 10px;">
+            <div>
+                <p>Copyright &copy; {{ content.current_year }} {{ profile.company }}.</p>
+                <p>{{ profile.address }}, {{ profile.address2 ? "#{profile.address2}, " }}{{ profile.city }}, {{ profile.state ? "#{profile.state}, " }}{{ profile.zip }} {{ profile.country }}</p>
+                <p>If you wish to not receive future emails from this business, please click <a href="[unsubscribelinkURL]&dmp_tag=UnsubscribeLink" target="_blank" title="Unsubscribe" style="text-decoration: underline !important; color: #222222 !important; font-weight: bold;">here</a>.</p>
+                <p>{{ edit.disclaimer }}</p>
+            </div>
+        </td>
+        <td width="20"><!--spacer--></td>
+    </tr>
+</table>

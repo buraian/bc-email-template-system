@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template Viewer</title>
+</head>
+<body style="font-family: monospace">
+    <h1>Templates</h1>
+    <table>
+        {% for template in templates %}
+            {% set template = pathinfo(template) %}
+            <tr>
+                <td><a href="{{ "/template/%s"|format(template.filename) }}">{{ template.basename }}</a></td>
+                {% for key, header in headers %}
+                    {% set header = pathinfo(header) %}
+                    <td><a href="{{ "/template/%s/%s"|format(template.filename, header.filename) }}">{{ key }}</a></td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+
+    <h1>Displays</h1>
+    <table>
+        {% for display in displays %}
+            {% set display = pathinfo(display) %}
+            <tr>
+                <td><a href="{{ "/display/%s"|format(display.filename) }}">{{ display.basename }}</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

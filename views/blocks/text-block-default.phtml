@@ -1,0 +1,14 @@
+{# Text Block Default #}
+
+{% set width = width|default(560) %}
+
+<table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+    <tr>
+        <td width="{{ width }}" valign="top" class="textBlockContents" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.4 !important; text-align: left; font-size: 14px;">
+            {{- content -}}
+        </td>
+    </tr>
+    <tr>
+        <td width="{{ width }}" height="10"><!--spacer--></td>
+    </tr>
+</table>

@@ -1,0 +1,59 @@
+{% extends "layouts/screenshots.phtml" %}
+
+{% set numColumns = 1 %}
+{% set numRows = 7 %}
+
+{% block main %}
+    {# Header #}
+    <div class="display-block-wrapper">
+        <div class="display-block-column-header">Pre-Built Components</div>
+    </div>
+
+    {# Pre-Header #}
+    <div class="display-block-wrapper">
+        <div class="display-block-container">
+            <div class="display-block-header"><h1>Pre-Header</h1></div>
+            {% include "components/web-version-link.phtml" %}
+        </div>
+    </div>
+
+    {# Header - Logo Left, Info Right #}
+    <div class="display-block-wrapper">
+        <div class="display-block-container">
+        <div class="display-block-header"><h1>Header | Logo Left, Info Right</h1></div>
+            {% include "components/header-logo-left-info-right.phtml" %}
+        </div>
+    </div>
+
+    {# Header - Info Left, Logo Right #}
+    <div class="display-block-wrapper">
+        <div class="display-block-container">
+        <div class="display-block-header"><h1>Header | Info Left, Logo Right</h1></div>
+            {% include "components/header-info-left-logo-right.phtml" %}
+        </div>
+    </div>
+
+    {# Header - Logo Top, Info Bottom #}
+    <div class="display-block-wrapper">
+        <div class="display-block-container">
+        <div class="display-block-header"><h1>Header | Logo Top, Info Bottom</h1></div>
+            {% include "components/header-logo-top-info-bottom.phtml" %}
+        </div>
+    </div>
+
+    {# Offer Instructions #}
+    <div class="display-block-wrapper">
+        <div class="display-block-container">
+            <div class="display-block-header"><h1>Offer Instructions</h1></div>
+            {% include "components/offer-instructions.phtml" %}
+        </div>
+    </div>
+
+    {# Footer #}
+    <div class="display-block-wrapper">
+        <div class="display-block-container">
+        <div class="display-block-header"><h1>Footer | Default</h1></div>
+            {% include "components/footer-default.phtml" %}
+        </div>
+    </div>
+{% endblock %}

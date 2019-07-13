@@ -1,0 +1,52 @@
+{# Template A #}
+
+{% extends "layouts/default.phtml" %}
+
+{% block main %}
+    {# Web Version Link #}
+    {% include "components/web-version-link.phtml" %}
+
+    {# Header #}
+    {% include "components/#{header}.phtml" %}
+
+    {# Single Column Frame #}
+    {% embed "frames/single-column-560.phtml" %}
+        {% block block1 %}
+
+            {# Image Block #}
+            {% include "blocks/image-block-default.phtml" with {
+                width: 560,
+                height: 315
+            } %}
+
+            {# Text Block #}
+            {% if edit.text1 %}
+                {% include "blocks/text-block-defult.phtml" with {
+                    content: edit.text1,
+                } %}
+            {% endif %}
+
+            {# Offer Block #}
+            {% include "blocks/offer-block-default.phtml" with {
+                width: 560,
+                height: 220,
+                title: edit.offer1title,
+                description: edit.offer1description,
+            } %}
+
+            {# Contact Statement #}
+            {% if edit['contact-statement'] %}
+                {% include "blocks/text-block-default.phtml" with {
+                    content: edit['contact-statement'],
+                } %}
+            {% endif %}
+        {% endblock %}
+    {% endembed %}
+
+    {# Offer Instructions #}
+    {% include "components/offer-instructions.phtml" %}
+
+    {# Footer #}
+    {% include "components/footer-default.phtml" %}
+
+{% endblock %}

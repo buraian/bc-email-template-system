@@ -1,0 +1,99 @@
+{# Template B #}
+
+{% extends "layouts/default.phtml" %}
+
+{% block main %}
+    {# Web Version Link #}
+    {% include "components/web-version-link.phtml" %}
+
+    {# Header #}
+    {% include "components/#{header}.phtml" %}
+
+    {# Single Column Image #}
+    {% embed "frames/single-column-560.phtml" %}
+        {% block block1 %}
+            {% include "blocks/image-block-default.phtml" with { width: 560, height: 315 } %}
+        {% endblock %}
+    {% endembed %}
+
+    {# Triple Column Text #}
+    {% if edit.text1 %}
+        {% embed "frames/triple-column-180-180-180.phtml" %}
+            {% block block1 %}
+                {% include "blocks/text-block-default.phtml" with {
+                    width: 180,
+                    content: edit.text1,
+                } %}
+            {% endblock %}
+            {% block block2 %}
+                {% include "blocks/text-block-default.phtml" with {
+                    width: 180,
+                    width: 560,
+                    content: edit.text2,
+                } %}
+            {% endblock %}
+            {% block block3 %}
+                {% include "blocks/text-block-default.phtml" with {
+                    width: 180,
+                    content: edit.text3,
+                } %}
+            {% endblock %}
+        {% endembed %}
+    {% endif %}
+
+    {# Triple Column Offer #}
+    {% embed "frames/triple-column-180-180-180.phtml" %}
+        {% block block1 %}
+            {% include "blocks/offer-block-default.phtml" with {
+                width: 180,
+                title: edit.offer1title,
+                description: edit.offer1description,
+            } %}
+        {% endblock %}
+        {% block block2 %}
+            {% include "blocks/offer-block-default.phtml" with {
+                width: 180,
+                title: edit.offer2title,
+                description: edit.offer2description,
+            } %}
+        {% endblock %}
+        {% block block3 %}
+            {% include "blocks/offer-block-default.phtml" with {
+                width: 180,
+                title: edit.offer3title,
+                description: edit.offer3description,
+            } %}
+        {% endblock %}
+    {% endembed %}
+
+    {# Single Column Text #}
+    {% if edit.text1 %}
+        {% embed "frames/single-column-560.phtml" %}
+            {% block block1 %}
+                {% include "blocks/text-block-default.phtml" with {
+                    width: 560,
+                    content: edit.text4,
+                } %}
+            {% endblock %}
+        {% endembed %}
+    {% endif %}
+
+    {# Contact Statement #}
+    {% if edit['contact-statement'] %}
+        {% embed "frames/single-column-560.phtml" %}
+            {% block block1 %}
+                {% include "blocks/text-block-default.phtml" with {
+                    width: 560,
+                    content: edit['contact-statement'],
+                } %}
+            {% endblock %}
+        {% endembed %}
+    {% endif %}
+
+    {# Offer Instructions #}
+    {% include "components/offer-instructions.phtml" %}
+
+    {# Footer #}
+    {% include "components/footer-default.phtml" %}
+
+{% endblock %}

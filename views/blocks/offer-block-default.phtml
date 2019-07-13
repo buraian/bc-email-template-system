@@ -1,0 +1,38 @@
+{# Offer Block Default #}
+
+{% set width = width|default(560) %}
+{% set height = height|default(315) %}
+
+<table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+    <tr>
+        <td width="{{ width }}" height="{{ height }}">
+            <table cellpadding="0" cellspacing="0" border="0" class="offerBox" style="border-collapse: collapse; border: 5px dashed #111111; mso-table-rspace: 0pt; mso-table-lspace: 0pt;">
+                <tr>
+                    <td width="10" height="5"><!--spacer--></td>
+                    <td width="{{ width }}" height="5"><!--spacer--></td>
+                    <td width="10" height="5"><!--spacer--></td>
+                </tr>
+                <tr>
+                    <td width="10"><!--spacer--></td>
+                    <td width="{{ width - 20 }}" height="{{ height - 10 }}" valign="middle" class="offerBlockContents" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; text-align: center; line-height: 1.2 !important; font-size: 14px; color: #222222;">
+                        <div class="offerAttention {{ "offer#{size}" }}" style="font-family: Futura-CondensedExtraBold, Impact, 'Segoe WP Semibold'; font-size: 36px; margin-bottom: 10px; margin-right: 0; margin-left: 0; margin-top: 10px;">
+                            {{- title -}}
+                        </div>
+                        <div class="offerDetails" style="margin-bottom: 10px; margin-right: 0; margin-left: 0; margin-top: 10px; font-size: 14px;">
+                            {{- description -}}
+                        </div>
+                    </td>
+                    <td width="10"><!--spacer--></td>
+                </tr>
+                <tr>
+                    <td width="10" height="5"><!--spacer--></td>
+                    <td width="{{ width }}" height="5"><!--spacer--></td>
+                    <td width="10" height="5"><!--spacer--></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td width="560" height="10"><!--spacer--></td>
+    </tr>
+</table>

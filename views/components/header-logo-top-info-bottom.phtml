@@ -1,0 +1,33 @@
+{# Header: Logo Top, Info Bottom #}
+
+{% embed "frames/single-column-560.phtml" %}
+    {% block block1 %}
+        <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+            <tr>
+                <td width="560" height="1" align="center" valign="top" class="imageBlockContents">
+                    {{ generate_image({
+                        width: 560,
+                        height: 248,
+                        fontFamily: 'stiljaFree',
+                        fontSize: 72,
+                        message: 'COMPANY',
+                    }) }}
+                </td>
+            </tr>
+            <tr>
+                <td width="560" height="10"><!--spacer--></td>
+            </tr>
+        </table>
+        <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+            <tr>
+                <td width="560" valign="top" class="textBlockContents" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.4 !important; text-align: center; font-size: 14px;">
+                    <div>{{ profile.address }}, {{ profile.address2 ? "#{profile.address2}, " }}{{ profile.city }}, {{ profile.state ? "#{profile.state}, " }}{{ profile.zip }} {{ profile.country }}</div>
+                    <div><b>{{ profile.phone ? "#{profile.phone} &bull; "|raw }}</b>{{ profile.fax ? "#{profile.fax} &bull; "|raw }}<a href="mailto:{{ profile.email }}" target="_blank" style="text-decoration: none !important; color: #222222 !important; font-weight: bold;">{{ profile.email }}</a> &bull; <a href="{{ profile.website }}" target="_blank" style="text-decoration: none !important; color: #222222 !important; font-weight: bold;">{{ profile.website }}</a></div>
+                </td>
+            </tr>
+            <tr>
+                <td width="560" height="20"><!--spacer--></td>
+            </tr>
+        </table>
+    {% endblock %}
+{% endembed %}

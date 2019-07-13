@@ -1,0 +1,146 @@
+{% extends "layouts/screenshots.phtml" %}
+
+{% set numColumns = 1 %}
+{% set numRows = 6 %}
+
+{% block main %}
+    {# Header #}
+    <div class="display-block-wrapper">
+        <div class="display-block-column-header">Offer Blocks</div>
+    </div>
+
+    {# Single Column Offer Block #}
+    <div class="display-block-wrapper">
+        <div class="display-block-container">
+            <div class="display-block-header"><h1>560</h1></div>
+            {% embed "frames/single-column-560.phtml" %}
+                {% block block1 %}
+                    {% include "blocks/offer-block-default.phtml" with {
+                        size: 'Xlarge',
+                        width: 560,
+                        height: 315,
+                        title: lipsum(3, 'words')|upper,
+                        description: lipsum(1, 'sentences'),
+                    } %}
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </div>
+
+    {# Double Column Offer Block #}
+    <div class="display-block-wrapper">
+        <div class="display-block-container">
+            <div class="display-block-header"><h1>275 | 275</h1></div>
+            {% embed "frames/double-column-275-275.phtml" %}
+                {% block block1 %}
+                    {% include "blocks/offer-block-default.phtml" with {
+                        size: 'Medium',
+                        width: 275,
+                        height: 160,
+                        title: lipsum(2, 'words')|upper,
+                        description: lipsum(8),
+                    } %}
+                {% endblock %}
+                {% block block2 %}
+                    {% include "blocks/offer-block-default.phtml" with {
+                        size: 'Medium',
+                        width: 275,
+                        height: 160,
+                        title: lipsum(1, 'words')|upper,
+                        description: lipsum(8),
+                    } %}
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </div>
+
+    {# Double Column Offer Block #}
+    <div class="display-block-wrapper">
+        <div class="display-block-container">
+            <div class="display-block-header"><h1>370 | 180</h1></div>
+            {% embed "frames/double-column-370-180.phtml" %}
+                {% block block1 %}
+                    {% include "blocks/offer-block-default.phtml" with {
+                        size: 'Large',
+                        width: 370,
+                        height: 208,
+                        title: lipsum(3, 'words')|upper,
+                        description: lipsum(13, 'words'),
+                    } %}
+                {% endblock %}
+                {% block block2 %}
+                    {% include "blocks/offer-block-default.phtml" with {
+                        size: 'Small',
+                        width: 180,
+                        height: 208,
+                        title: lipsum(1, 'words')|upper,
+                        description: lipsum(7, 'words'),
+                    } %}
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </div>
+
+    {# Double Column Offer Block #}
+    <div class="display-block-wrapper">
+        <div class="display-block-container">
+            <div class="display-block-header"><h1>180 | 370</h1></div>
+            {% embed "frames/double-column-180-370.phtml" %}
+                {% block block1 %}
+                    {% include "blocks/offer-block-default.phtml" with {
+                        size: 'Small',
+                        width: 180,
+                        height: 208,
+                        title: lipsum(1, 'words')|upper,
+                        description: lipsum(7, 'words'),
+                    } %}
+                {% endblock %}
+                {% block block2 %}
+                    {% include "blocks/offer-block-default.phtml" with {
+                        size: 'Large',
+                        width: 370,
+                        height: 208,
+                        title: lipsum(3, 'words')|upper,
+                        description: lipsum(13, 'words'),
+                    } %}
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </div>
+
+    {# Triple Column Offer Block #}
+    <div class="display-block-wrapper">
+        <div class="display-block-container">
+            <div class="display-block-header"><h1>180 | 180 | 180</h1></div>
+            {% embed "frames/triple-column-180-180-180.phtml" %}
+                {% block block1 %}
+                    {% include "blocks/offer-block-default.phtml" with {
+                        size: 'Small',
+                        width: 180,
+                        height: 100,
+                        title: lipsum(1, 'words')|upper,
+                        description: lipsum(6, 'words'),
+                    } %}
+                {% endblock %}
+                {% block block2 %}
+                    {% include "blocks/offer-block-default.phtml" with {
+                        size: 'Small',
+                        width: 180,
+                        height: 100,
+                        title: lipsum(1, 'words')|upper,
+                        description: lipsum(6, 'words'),
+                    } %}
+                {% endblock %}
+                {% block block3 %}
+                    {% include "blocks/offer-block-default.phtml" with {
+                        size: 'Small',
+                        width: 180,
+                        height: 100,
+                        title: lipsum(1, 'words')|upper,
+                        description: lipsum(6, 'words'),
+                    } %}
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </div>
+{% endblock %}

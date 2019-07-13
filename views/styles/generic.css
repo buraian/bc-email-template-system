@@ -1,0 +1,93 @@
+:root {
+    --text: hsl(0, 0%, 84%);
+}
+
+/* Generic */
+html, body, a {
+    color: var(--text) !important;
+}
+
+td.textBlockContents {
+    color: transparent;
+    background-color: var(--text);
+    display: inline;
+}
+
+.textBlockContents a {
+    visibility: hidden;
+}
+
+.textBlockContents div {
+    color: transparent;
+    background-color: var(--text);
+    display: inline;
+}
+
+.textBlockContents div:after {
+    content: "\A";
+    white-space: pre;
+}
+
+/* Web Version Link */
+#unsubscribe {
+    color: transparent;
+    background-color: var(--text);
+    display: inline;
+}
+
+#unsubscribe a {
+    visibility: hidden;
+}
+
+#webVersionLink {
+    background-color: var(--text);
+    display: inline;
+}
+
+/* Offers */
+.offerBox {
+    border-color: var(--text) !important;
+}
+
+.offerAttention,
+.offerDetails {
+    color: transparent;
+    background-color: var(--text);
+    display: inline;
+    line-height: 1.5;
+}
+
+.offerAttention:after {
+    content: "\A";
+    white-space: pre;
+}
+
+/* Offer Instructions */
+table[bgcolor="#222222"] {
+    background-color: hsl(0, 0%, 70%) !important;
+}
+
+td[valign="middle"] p {
+    color: transparent;
+    background-color: var(--text);
+}
+
+/* Footer */
+#footerTable {
+    margin-bottom: 3em;
+}
+
+#footerTable p {
+    color: transparent;
+    background-color: var(--text);
+    display: table;
+}
+
+#footerTable p a {
+    visibility: hidden;
+}
+
+#footerTable p:last-of-type {
+    display: inline;
+    line-height: 1.5;
+}

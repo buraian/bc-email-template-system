@@ -1,0 +1,107 @@
+{% set defaultColor = "#e6e6e6" %}
+{% set frameWidth = 600 %}
+{% set frameBorderWidth = 3 %}
+{% set gutter = 16 %}
+{% set numColumns = numColumns|default(1) %}
+{% set numRows = numRows|default(6) %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <style>{% include "styles/default.css" %}</style>
+    {% if GENERICIZED %}<style>{% include "styles/generic.css" %}</style>{% endif %}
+    <style>
+        :root {
+            --defaultColor: hsl(0, 0%, 84%);
+            --defaultDark: hsl(0, 0%, 30%);
+            --sansSerif: 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            padding: {{ "#{gutter}px" }};
+            width: max-content !important;
+        }
+
+        img {
+            display: block; /* Bottom Margin Fix */
+        }
+
+        .container {
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: repeat({{ numColumns }}, auto);
+            grid-template-rows: repeat({{ numRows }}, auto);
+            width: {{ "#{(frameWidth + (gutter * 2) + (frameBorderWidth * 2)) * numColumns}px" }};
+        }
+
+        .display-block-wrapper {
+            margin: 1rem;
+            position: relative;
+        }
+
+        .display-block-container {
+            background-color: #ffffff;
+            border-radius: 3px;
+            border: {{ "#{frameBorderWidth}px" }} solid var(--defaultColor);
+            display: flex;
+            justify-content: center;
+            padding: {{ "#{gutter}px" }} 0;
+        }
+
+        .display-block-container:empty {
+            display: none;
+        }
+
+        .display-block-container > table {
+            border-left: 0 !important;
+            border-right: 0 !important;
+        }
+
+        .display-block-header {
+            position: absolute;
+            text-align: center;
+            top: -8px;
+            width: 100%;
+        }
+
+        .display-block-header h1 {
+            background-color: var(--defaultDark);
+            color: #ffffff !important;
+            font-family: var(--sansSerif);
+            font-size: 18px;
+            display: inline;
+            padding: 1px 12px;
+            border-radius: 100px;
+        }
+
+        .display-block-column-header {
+            color: var(--defaultDark);
+            font-family: var(--sansSerif);
+            font-size: 24px;
+            font-weight: bold;
+            padding: 1rem 0;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .imageBlockContents img {
+            margin: 0 auto;
+        }
+
+        img[src*=fefefe] {
+            border: 3px dotted {{ defaultColor }};
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% block main %}{% endblock %}
+    </div>
+
+    {% if GENERICIZED %}<script>{% include "scripts/generic.js" %}</script>{% endif %}
+</body>
+</html>

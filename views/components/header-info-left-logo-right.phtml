@@ -1,0 +1,67 @@
+{# Header: Info Left, Logo Right #}
+
+{% embed "frames/double-column-275-275.phtml" %}
+    {% block block1 %}
+        <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+            <tr>
+                <td width="275" valign="top" class="textBlockContents" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.4 !important; text-align: left; font-size: 14px;">
+                    {{- profile.address -}}
+                </td>
+            </tr>
+            <tr>
+                <td width="275" valign="top" class="textBlockContents" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.4 !important; text-align: left; font-size: 14px;">
+                    {{- profile.address2 -}}
+                </td>
+            </tr>
+            <tr>
+                <td width="275" valign="top" class="textBlockContents" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.4 !important; text-align: left; font-size: 14px;">
+                    {{- profile.city }}, {{ profile.state }} {{ profile.zip -}}
+                </td>
+            </tr>
+            <tr>
+                <td width="275" height="10" valign="top" class="textBlockContents" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.4 !important; text-align: left; font-size: 14px;"><!--spacer--></td>
+            </tr>
+            <tr>
+                <td width="275" valign="top" class="textBlockContents" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.4 !important; text-align: left; font-size: 21px; font-weight: bold;">
+                    {{- profile.phone -}}
+                </td>
+            </tr>
+            <tr>
+                <td width="275" valign="top" class="textBlockContents" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.4 !important; text-align: left; font-size: 14px;">
+                    {{- profile.fax -}}
+                </td>
+            </tr>
+            <tr>
+                <td width="275" valign="top" class="textBlockContents" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.4 !important; text-align: left; font-size: 14px;">
+                    <a href="mailto:{{ profile.email }}" target="_blank" style="text-decoration: none !important; color: #222222 !important; font-weight: bold;">{{ profile.email }}</a>
+                </td>
+            </tr>
+            <tr>
+                <td width="275" valign="top" class="textBlockContents" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.4 !important; text-align: left; font-size: 14px;">
+                    <a href="{{ profile.website }}" target="_blank" style="text-decoration: none !important; color: #222222 !important; font-weight: bold;">{{ profile.website }}</a>
+                </td>
+            </tr>
+            <tr>
+                <td width="275" height="10"><!--spacer--></td>
+            </tr>
+        </table>
+    {% endblock %}
+    {% block block2 %}
+        <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+            <tr>
+                <td width="275" align="right" valign="top" class="imageBlockContents">
+                    {{ generate_image({
+                        width: 275,
+                        height: 136,
+                        fontFamily: 'stiljaFree',
+                        fontSize: 36,
+                        message: 'COMPANY',
+                    }) }}
+                </td>
+            </tr>
+            <tr>
+                <td width="275" height="20"><!--spacer--></td>
+            </tr>
+        </table>
+    {% endblock %}
+{% endembed %}

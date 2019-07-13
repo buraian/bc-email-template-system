@@ -1,0 +1,156 @@
+{% extends "layouts/screenshots.phtml" %}
+
+{% set numColumns = 1 %}
+{% set numRows = 6 %}
+
+{% block main %}
+    {# Header #}
+    <div class="display-block-wrapper">
+        <div class="display-block-column-header">Frames</div>
+    </div>
+
+    {# Single Column Frame #}
+    <div class="display-block-wrapper">
+        <div class="display-block-container">
+            <div class="display-block-header"><h1>Single Column | 560</h1></div>
+            {% embed "frames/single-column-560.phtml" %}
+                {% block block1 %}
+                    {{ generate_image({
+                        width: 560,
+                        height: 315,
+                        background: 'fefefe',
+                        fontColor: defaultColor,
+                        fontSize: 96,
+                        icon: 'fa-plus',
+                    }) }}
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </div>
+
+    {# Double Column Frame #}
+    <div class="display-block-wrapper">
+        <div class="display-block-container">
+            <div class="display-block-header"><h1>Double Column | 275 | 275</h1></div>
+            {% embed "frames/double-column-275-275.phtml" %}
+                {% block block1 %}
+                    {{ generate_image({
+                        width: 275,
+                        height: 170,
+                        background: 'fefefe',
+                        fontColor: defaultColor,
+                        fontSize: 96,
+                        icon: 'fa-plus',
+                    }) }}
+                {% endblock %}
+                {% block block2 %}
+                    {{ generate_image({
+                        width: 275,
+                        height: 170,
+                        background: 'fefefe',
+                        fontColor: defaultColor,
+                        fontSize: 96,
+                        icon: 'fa-plus',
+                    }) }}
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </div>
+
+    {# Double Column Frame #}
+    <div class="display-block-wrapper">
+        <div class="display-block-container">
+            <div class="display-block-header"><h1>Double Column | 370 | 180</h1></div>
+            {% embed "frames/double-column-370-180.phtml" %}
+                {% block block1 %}
+                    {{ generate_image({
+                        width: 370,
+                        height: 208,
+                        background: 'fefefe',
+                        fontColor: defaultColor,
+                        fontSize: 96,
+                        icon: 'fa-plus',
+                    }) }}
+                {% endblock %}
+                {% block block2 %}
+                    {{ generate_image({
+                        width: 180,
+                        height: 208,
+                        background: 'fefefe',
+                        fontColor: defaultColor,
+                        fontSize: 96,
+                        icon: 'fa-plus',
+                    }) }}
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </div>
+
+    {# Double Column Frame #}
+    <div class="display-block-wrapper">
+        <div class="display-block-container">
+            <div class="display-block-header"><h1>Double Column | 180 | 370</h1></div>
+            {% embed "frames/double-column-180-370.phtml" %}
+                {% block block1 %}
+                    {{ generate_image({
+                        width: 180,
+                        height: 208,
+                        background: 'fefefe',
+                        fontColor: defaultColor,
+                        fontSize: 96,
+                        icon: 'fa-plus',
+                    }) }}
+                {% endblock %}
+                {% block block2 %}
+                    {{ generate_image({
+                        width: 370,
+                        height: 208,
+                        background: 'fefefe',
+                        fontColor: defaultColor,
+                        fontSize: 96,
+                        icon: 'fa-plus',
+                    }) }}
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </div>
+
+    {# Triple Column Frame #}
+    <div class="display-block-wrapper">
+        <div class="display-block-container">
+            <div class="display-block-header"><h1>Triple Column | 180 | 180 | 180</h1></div>
+            {% embed "frames/triple-column-180-180-180.phtml" %}
+                {% block block1 %}
+                    {{ generate_image({
+                        width: 180,
+                        height: 101,
+                        background: 'fefefe',
+                        fontColor: defaultColor,
+                        fontSize: 96,
+                        icon: 'fa-plus',
+                    }) }}
+                {% endblock %}
+                {% block block2 %}
+                    {{ generate_image({
+                        width: 180,
+                        height: 101,
+                        background: 'fefefe',
+                        fontColor: defaultColor,
+                        fontSize: 96,
+                        icon: 'fa-plus',
+                    }) }}
+                {% endblock %}
+                {% block block3 %}
+                    {{ generate_image({
+                        width: 180,
+                        height: 101,
+                        background: 'fefefe',
+                        fontColor: defaultColor,
+                        fontSize: 96,
+                        icon: 'fa-plus',
+                    }) }}
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,180 @@
+/* Client-specific Styles */
+#outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
+body{width:100% !important;} .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to display emails at full width */
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 1.4;} /* Force Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
+body{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%} /* Prevent Webkit and Windows Mobile platforms from changing default text sizes. */
+
+/* Reset Styles */
+body{margin:0; padding:0;}
+img{border:none; line-height:100%; outline:none; text-decoration:none;}
+table {border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;}
+table td{border-collapse:collapse;} /* Bring inline? No */;
+#backgroundTable{height:100% !important; margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+
+/* Template Styles */
+body, #backgroundTable {
+    background-color: #F5F5F5;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #222222 !important;
+    font-weight: bold;
+    line-height: 100%;
+    display: block;
+    margin-bottom: 10px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 0;
+}
+
+h1 {font-size: 36px;}
+h2 {font-size: 24px;}
+h3 {font-size: 18px;}
+h4 {font-size: 14px;}
+
+h1 a, h2 a, h3 a, h4 a {color: #222222 !important;}
+
+a {
+    text-decoration: underline;
+
+}
+
+a[href^="tel"], a[href^="sms"] {
+    text-decoration: none;
+    pointer-events: none;
+    cursor: default;
+    color: #222222;
+}
+
+/* Weblink Styles */
+#weblinkTable a {
+    text-decoration: underline !important;
+    color: #222222 !important;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+/* Preheader Styles */
+.preheaderContents {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 1 !important;
+        text-align: center;
+        font-size: 12px;
+}
+
+/* Image Block Styles */
+.imageBlockContents img {
+    display: block;
+}
+
+/* Text Block Styles */
+.textBlockContents { /* td */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.4 !important;
+    font-weight: normal;
+    text-align: left;
+    font-size: 14px;
+}
+
+.textBlockContents p {
+    margin-bottom: 10px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.textBlockContents a {
+    text-decoration: underline;
+    color: #222222;
+}
+
+/* Offer Block Styles */
+.offerBox {
+    border: 5px dashed #111111;
+}
+
+.offerBlockContents { /* td */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.2 !important;
+    text-align: center;
+    font-size: 14px;
+    color: #222222;
+}
+
+.offerBlockContents p {
+    margin-bottom: 10px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.offerBlockContents a {
+    text-decoration: underline;
+    color: #222222;
+}
+
+.offerAttention { /* p */
+    font-family: Futura-CondensedExtraBold, Impact, 'Segoe WP Semibold';
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+.offerSmall {font-size: 24px;}
+.offerMedium {font-size: 28px;}
+.offerLarge {font-size: 32px;}
+.offerXlarge {font-size: 36px;}
+
+.offerDetails { /* p */
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+/* Offer Instructions */
+#offerInstructions {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.4 !important;
+    text-align: center;
+    font-size: 13px;
+    color: #FFFFFF;
+}
+
+/* Twitter Styles */
+#twitterBlock a,
+#twitterBlock a:link,
+#twitterBlock a:visited {
+    text-decoration: none;
+    color: #2aa9e0;
+}
+
+/* Facebook Styles */
+#facebookBlock a,
+#facebookBlock a:link,
+#facebookBlock a:visited {
+    text-decoration: none;
+    color: #3c5a98;
+}
+
+/* Footer Styles */
+#footerTable div {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1 !important;
+    text-align: left;
+    font-size: 10px;
+}
+
+#footerTable a {
+    text-decoration: underline !important;
+    color: #222222 !important;
+    font-weight: bold;
+}

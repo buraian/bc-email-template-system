@@ -1,0 +1,8 @@
+{
+  "name": "email-template-system",
+  "version": "1.0.0",
+  "scripts": {
+    "server": "php -S 127.0.0.1:3010"
+  },
+  "author": "Brian Clark"
+}
